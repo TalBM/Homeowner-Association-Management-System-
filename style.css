@@ -1,0 +1,20 @@
+*{
+    direction: rtl;
+    box-sizing: border-box;
+    font-family: 'Assistant', sans-serif;
+
+}
+
+.navbar-brand {
+    font-weight: 600;
+}
+
+.btn {
+padding:.3em .5em;
+margin: 0.5em;
+}
+
+.img{
+     https://s3-eu-west-1.amazonaws.com/media.madlan.co.il/property/zone_4c497874-0e55-49ae-ad9d-96d3a8f45227.jpg
+
+}
