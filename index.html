@@ -29,6 +29,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
+
     <!-- Navbar links -->
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav">
@@ -48,153 +49,13 @@
           <a class="nav-link" href="#">הצבעות</a>
         </li>
       </ul>
-      <button class="btn btn-primary m-1" type="button" data-toggle="modal" data-target="#signup">הרשמה</button>
-      <button class="btn btn-primary m-1" type="button" data-toggle="modal" data-target="#login">התחבר</button>
+      <div class="btn-login">
+        <button class="btn btn-primary m-1" type="button" data-toggle="modal" data-target="#signup">הרשמה</button>
+        <button class="btn btn-primary m-1" type="button" data-toggle="modal" data-target="#login">התחבר</button>
+      </div>
+
     </div>
   </nav>
-
-  <!-- Page Content -->
-  <div class="bg-img">
-
-    <section>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <h1 class="mt-5 wellcom">ניהול וועדי בתים מעולם לא היה קל כל כך</h1>
-            <p class="wellcom">התחברו עוד היום למערכת החדשנית והפופולרית בישראל ותוכלו גם אתה לנהל כבר היום את הבניין שלכם</p>
-            <button class="btn btn-primary m-1" type="button" data-toggle="modal" data-target="#signup">הרשמה</button>
-            <button class="btn btn-primary m-1" type="button" data-toggle="modal" data-target="#login">התחבר</button>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-
-
-  <!--  login  -->
-  <div class="card bg-light" id="login">
-    <article class="card-body mx-auto" style="max-width: 400px;">
-      <h4 class="card-title mt-3 text-center">התחברות</h4>
-      <p class="text-center">יש להכניס את הפרטים הבאים</p>
-        <!-- form-group// -->
-
-        <div class="form-group input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text">
-                <i class="fa fa-envelope"></i>
-              </span>
-            </div>
-            <input name="" class="form-control" placeholder="דוא'ל" type="email">
-          </div>
-          <!-- form-group// -->
-        <div class="form-group input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text">
-                <i class="fa fa-lock"></i>
-              </span>
-            </div>
-            <input class="form-control" placeholder="בחר סיסמה" type="password">
-          </div>
- <!-- form-group// -->
-          <div class="form-group">
-              <button type="button" class="btn btn-primary btn-block">כניסה</button>
-            </div>
-
-          <!-- form-group// -->
-        <p class="text-center">עוד אין לך חשבון?
-            <a href=""> הרשמה </a>
-          </p>
-      <form>
-  </div>
-
-
-
-  <!--  sign up  -->
-  <div class="card bg-light" id="signup">
-    <article class="card-body mx-auto" style="max-width: 400px;">
-      <h4 class="card-title mt-3 text-center">הרשמה</h4>
-      <p class="text-center">יצירת חשבון חדש במהירות ובחינם</p>
-
-      <form>
-        <div class="form-group input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text">
-              <i class="fa fa-user"></i>
-            </span>
-          </div>
-          <input name="" class="form-control" placeholder="שם פרטי ומשפחה" type="text">
-        </div>
-        <!-- form-group// -->
-
-        <div class="form-group input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text">
-              <i class="fa fa-envelope"></i>
-            </span>
-          </div>
-          <input name="" class="form-control" placeholder="דוא'ל" type="email">
-        </div>
-        <!-- form-group// -->
-
-        <div class="form-group input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text">
-              <i class="fa fa-phone"></i>
-            </span>
-          </div>
-          <input name="" class="form-control" placeholder="מספר טלפון נייד" type="text">
-          <select class="custom-select" style="max-width: 80px;">
-            <option selected="">050</option>
-            <option value="1">051</option>
-            <option value="2">052</option>
-            <option value="3">053</option>
-            <option value="3">054</option>
-            <option value="3">055</option>
-          </select>
-        </div>
-        <!-- form-group// -->
-
-        <div class="form-group input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text">
-              <i class="fa fa-home"></i>
-            </span>
-          </div>
-          <input name="" class="form-control" placeholder="מספר דירה" type="text">
-        </div>
-
-        <!-- form-group end.// -->
-        <div class="form-group input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text">
-              <i class="fa fa-lock"></i>
-            </span>
-          </div>
-          <input class="form-control" placeholder="בחר סיסמה" type="password">
-        </div>
-        <!-- form-group// -->
-        <div class="form-group input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text">
-              <i class="fa fa-lock"></i>
-            </span>
-          </div>
-          <input class="form-control" placeholder="הקלד שוב סיסמה" type="password">
-        </div>
-        <!-- form-group// -->
-        <div class="form-group">
-          <button type="button" class="btn btn-primary btn-block">צור חשבון</button>
-        </div>
-        <!-- form-group// -->
-        <p class="text-center">כבר יש לך חשבון?
-          <a href=""> התחבר </a>
-        </p>
-      </form>
-    </article>
-  </div>
-  <!-- end:  sign-up -->
-
-
 
 
 
@@ -206,6 +67,7 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
+    
 </body>
 
 </html>
