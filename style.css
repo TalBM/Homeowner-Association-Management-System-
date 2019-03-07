@@ -5,6 +5,14 @@
 
 }
 
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, p {
+text-align: right;
+}
+
+.wellcom{
+color: white;
+}
+
 .navbar-brand {
     font-weight: 600;
 }
@@ -14,7 +22,13 @@ padding:.3em .5em;
 margin: 0.5em;
 }
 
-.img{
-     https://s3-eu-west-1.amazonaws.com/media.madlan.co.il/property/zone_4c497874-0e55-49ae-ad9d-96d3a8f45227.jpg
-
+.bg-img{
+    background-image: url(https://s3-eu-west-1.amazonaws.com/media.madlan.co.il/property/zone_4c497874-0e55-49ae-ad9d-96d3a8f45227.jpg);
+    background-repeat: no-repeat;
+    position: absolute;
+    /* height: calc(100% - 55px); */
+    height:100%;
+    width: 100%;
+    border: none;
+    margin-top: 0px;
 }
