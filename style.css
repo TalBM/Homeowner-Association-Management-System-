@@ -17,10 +17,14 @@ color: white;
     font-weight: 600;
 }
 
-.btn {
+.btn-login {
 padding:.3em .5em;
 margin: 0.5em;
 }
+
+.btn {
+    padding:.3em .5em;
+    }
 
 .bg-img{
     background-image: url(https://s3-eu-west-1.amazonaws.com/media.madlan.co.il/property/zone_4c497874-0e55-49ae-ad9d-96d3a8f45227.jpg);
@@ -32,3 +36,34 @@ margin: 0.5em;
     border: none;
     margin-top: 0px;
 }
+
+.input-group-text, .input {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+
+}
+
+.input-group-text{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: .375rem .75rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #007bff;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #e7f3ff;
+    border: 1px solid #d2e8ff;
+    max-width: 60px;
+}
+.form-control, .custom-select {
+    border: 1px solid #d2e8ff;
+border-radius: 0;
+}
+

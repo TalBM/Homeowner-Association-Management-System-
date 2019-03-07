@@ -1,77 +1,211 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>ניהול וועדי בתים</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<!--  font google  -->
-<link href="https://fonts.googleapis.com/css?family=Assistant:200,300,400,600,700,800&amp;subset=hebrew" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<head>
+  <title>ניהול וועדי בתים</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!--  font google  -->
+  <link href="https://fonts.googleapis.com/css?family=Assistant:200,300,400,600,700,800&amp;subset=hebrew" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <link rel="stylesheet" href="style.css">
+</head>
 
-  </head>
 
-  
-  <body>
+<body>
 
-      <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-          <!-- Brand -->
-          <a class="navbar-brand" href="#">אפליקציה לניהול וועדי בתים</a>
-        
-          <!-- Toggler/collapsibe Button -->
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        
-          <!-- Navbar links -->
-          <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#">מבט כללי</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">דיירים</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">הודעות</a>
-                </li> 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">נושאים</a>
-                  </li> 
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">הצבעות</a>
-                    </li> 
-            </ul>
-            <button class="btn btn-success" type="button">הרשמה</button>
-            <button class="btn btn-success" type="button">התחבר</button>
-          </div> 
-        </nav>
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">אפליקציה לניהול וועדי בתים</a>
 
-        <!-- Page Content -->    
-        <div class="bg-img">
-        
-  <section>
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">מבט כללי</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">דיירים</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">הודעות</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">נושאים</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">הצבעות</a>
+        </li>
+      </ul>
+      <button class="btn btn-primary m-1" type="button" data-toggle="modal" data-target="#signup">הרשמה</button>
+      <button class="btn btn-primary m-1" type="button" data-toggle="modal" data-target="#login">התחבר</button>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="bg-img">
+
+    <section>
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
             <h1 class="mt-5 wellcom">ניהול וועדי בתים מעולם לא היה קל כל כך</h1>
-            <p  class="wellcom">התחברו עוד היום למערכת החדשנית והפופולרית בישראל ותוכלו גם אתה לנהל כבר היום את הבניין שלכם</p>
-            <button class="btn btn-success" type="button">הרשמה</button>
-            <button class="btn btn-success" type="button">התחברות</button>
+            <p class="wellcom">התחברו עוד היום למערכת החדשנית והפופולרית בישראל ותוכלו גם אתה לנהל כבר היום את הבניין שלכם</p>
+            <button class="btn btn-primary m-1" type="button" data-toggle="modal" data-target="#signup">הרשמה</button>
+            <button class="btn btn-primary m-1" type="button" data-toggle="modal" data-target="#login">התחבר</button>
           </div>
         </div>
       </div>
     </section>
-        </div>
-    
-          
+  </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  </body>
+
+  <!--  login  -->
+  <div class="card bg-light" id="login">
+    <article class="card-body mx-auto" style="max-width: 400px;">
+      <h4 class="card-title mt-3 text-center">התחברות</h4>
+      <p class="text-center">יש להכניס את הפרטים הבאים</p>
+        <!-- form-group// -->
+
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="fa fa-envelope"></i>
+              </span>
+            </div>
+            <input name="" class="form-control" placeholder="דוא'ל" type="email">
+          </div>
+          <!-- form-group// -->
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="fa fa-lock"></i>
+              </span>
+            </div>
+            <input class="form-control" placeholder="בחר סיסמה" type="password">
+          </div>
+ <!-- form-group// -->
+          <div class="form-group">
+              <button type="button" class="btn btn-primary btn-block">כניסה</button>
+            </div>
+
+          <!-- form-group// -->
+        <p class="text-center">עוד אין לך חשבון?
+            <a href=""> הרשמה </a>
+          </p>
+      <form>
+  </div>
+
+
+
+  <!--  sign up  -->
+  <div class="card bg-light" id="signup">
+    <article class="card-body mx-auto" style="max-width: 400px;">
+      <h4 class="card-title mt-3 text-center">הרשמה</h4>
+      <p class="text-center">יצירת חשבון חדש במהירות ובחינם</p>
+
+      <form>
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <i class="fa fa-user"></i>
+            </span>
+          </div>
+          <input name="" class="form-control" placeholder="שם פרטי ומשפחה" type="text">
+        </div>
+        <!-- form-group// -->
+
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <i class="fa fa-envelope"></i>
+            </span>
+          </div>
+          <input name="" class="form-control" placeholder="דוא'ל" type="email">
+        </div>
+        <!-- form-group// -->
+
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <i class="fa fa-phone"></i>
+            </span>
+          </div>
+          <input name="" class="form-control" placeholder="מספר טלפון נייד" type="text">
+          <select class="custom-select" style="max-width: 80px;">
+            <option selected="">050</option>
+            <option value="1">051</option>
+            <option value="2">052</option>
+            <option value="3">053</option>
+            <option value="3">054</option>
+            <option value="3">055</option>
+          </select>
+        </div>
+        <!-- form-group// -->
+
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <i class="fa fa-home"></i>
+            </span>
+          </div>
+          <input name="" class="form-control" placeholder="מספר דירה" type="text">
+        </div>
+
+        <!-- form-group end.// -->
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <i class="fa fa-lock"></i>
+            </span>
+          </div>
+          <input class="form-control" placeholder="בחר סיסמה" type="password">
+        </div>
+        <!-- form-group// -->
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <i class="fa fa-lock"></i>
+            </span>
+          </div>
+          <input class="form-control" placeholder="הקלד שוב סיסמה" type="password">
+        </div>
+        <!-- form-group// -->
+        <div class="form-group">
+          <button type="button" class="btn btn-primary btn-block">צור חשבון</button>
+        </div>
+        <!-- form-group// -->
+        <p class="text-center">כבר יש לך חשבון?
+          <a href=""> התחבר </a>
+        </p>
+      </form>
+    </article>
+  </div>
+  <!-- end:  sign-up -->
+
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
