@@ -1,12 +1,20 @@
-
-<div><!-- // mדע here -->
+<div>
+    <!-- // MSG here -->
     <div class="container rtl">
-            <h1>הודעות</h1>
-            <label class="label-default rtl">חפש הודעה:</label>
-            <input class="form-control w-100 mb-3" type="text" ng-model="msgfilterBy"></input>
-            <div ng-show="nothingToShow===0" >
+        <h1>הודעות</h1>
+        <div class="msg-bg mb-3">
+            <label class="label-default rtl">הוספת הודעה:</label>
+            <input class="form-control " type="text" ng-model="newMsg"></input>
+            <button class="btn btn-primary" type="button" ng-click="addNewMsg()">שלח</button>
+            <!-- <a class="btn btn-primary" ng-click="addNewMsg">שלח</a> -->
+        </div>
+        <label class="label-default rtl">חפש הודעה:</label>
+        <input class="form-control w-100 mb-3" type="text" ng-model="msgfilterBy"></input>
+  
+        <msg-card ng-repeat="msg in msgArray | filter:filterMsg as results"></msg-card>
+         <!--   "as results" is a new array of filtered msgs   -->
+        <div ng-show="results.length === 0">
                 <p class="text-warning">לא נמצאו תוצאות לערך שחיפשת</p>
             </div>
-            <msg-card ng-repeat="msg in msgArray | filter:filterMsg"></msg-card>
     </div>
 </div>

@@ -25,19 +25,30 @@ app.controller("messagesCtrl", function ($scope, $log, $http) {
 
 
     $scope.filterMsg = function (msg) {
-
         if (!$scope.msgfilterBy) {
 
             return true;
             // } else if ( movie.title.toLowerCase().includes($scope.moviefilterBy.toLowerCase()) )
-        } else if (msg.title.includes($scope.msgfilterBy)) {
+        } else if (
+            msg.msg.includes($scope.msgfilterBy) ||
+            msg.postedBy.includes($scope.msgfilterBy) ||
+            msg.dira.includes($scope.msgfilterBy)) {
+
             return true;
         }
         else {
+            if ($scope.nothingToShow > 0) {
+                $scope.nothingToShow++;
+            }
+            else {
+                $scope.nothingToShow = 1;
+            }
+            //$scope.nothingToShow = ($scope.nothingToShow > 0) ? $scope.nothingToShow + 1 : 1;
             return false;
 
         }
+        
     };
 
-    
+
 });

@@ -95,13 +95,15 @@ h1{
 }
 
 .msg-txt{
-
-    font-size: 1em;
+line-height: 1.4em;
+    font-size: 1.2em;
+    margin-top: 5px;
 }
 
 .msg-info{
     color: rgb(90, 125, 189);
-    font-size: 0.8em;
+    font-size: 1em;
+
 }
 
 .msg-bg{
