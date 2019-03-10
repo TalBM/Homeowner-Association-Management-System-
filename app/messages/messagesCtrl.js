@@ -1,13 +1,12 @@
 app.controller("messagesCtrl", function ($scope, $log, $http) {
 
-    $scope.test = "---הודעות OK---";
 
     function Message(msg, postedBy, dira, isVaad, created) {
         this.msg = msg;
-        this.postedBy = postedBy;
-        this.dira = dira;
-        this.isVaad = isVaad;
-        this.poster = poster;
+        this.postedBy = postedBy || "מני מנחמוב";
+        this.dira = dira || "1";
+        this.isVaad = isVaad || false;
+        this.created = created || new Date();
 
     }
 
@@ -47,8 +46,12 @@ app.controller("messagesCtrl", function ($scope, $log, $http) {
             return false;
 
         }
-        
+
     };
 
+    $scope.addNewMsg = function() {
+        var newMsg= new Message($scope.newMsg)
+        $scope.msgArray.push(newMsg)
+    }
 
 });

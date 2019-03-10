@@ -3,7 +3,7 @@
 
         <div class="w-100" style="text-align: right">
             <!-- <h3 class="mb-3"><div ng-click="newF(movie)">{{movie.title}}</div></h3> -->
-            <p class="mb-0 msg-info msg-date">{{msg.created}}</p>          
+            <p class="mb-0 msg-info msg-date">{{msg.created | date:'dd-MM-yyyy'}}</p>          
             <p class="mb-0 msg-info"><i ng-show={{msg.isVaad}} class="fa fa-user">&nbsp;</i><b>{{msg.postedBy}}</b>&nbsp;(דירה {{msg.dira}})</p>
             <p class="mb-0 msg-txt">{{msg.msg}}</p>
 
