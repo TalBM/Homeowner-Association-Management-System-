@@ -1,1 +1,12 @@
-<h1>this is messages {{test}}</h1>
+
+<div><!-- // mדע here -->
+    <div class="container rtl">
+            <h1>הודעות</h1>
+            <label class="label-default rtl">חפש הודעה:</label>
+            <input class="form-control w-100 mb-3" type="text" ng-model="msgfilterBy"></input>
+            <div ng-show="nothingToShow===0" >
+                <p class="text-warning">לא נמצאו תוצאות לערך שחיפשת</p>
+            </div>
+            <msg-card ng-repeat="msg in msgArray | filter:filterMsg"></msg-card>
+    </div>
+</div>

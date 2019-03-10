@@ -81,8 +81,29 @@ float: left;
 h1{
     font-weight: 700;
     line-height: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    
 }
 
 .mt-5e{
     margin-top: 5em;
+}
+.rtl{
+    direction: rtl;
+    text-align: right;
+}
+
+.msg-txt{
+
+    font-size: 1em;
+}
+
+.msg-info{
+    color: rgb(90, 125, 189);
+    font-size: 0.8em;
+}
+
+.msg-bg{
+
 }
