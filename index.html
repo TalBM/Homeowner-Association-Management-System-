@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="vaadApp">
 
 <head>
   <title>ניהול וועדי בתים</title>
@@ -13,58 +13,32 @@
     crossorigin="anonymous">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular-route.js"></script>
+
 
   <link rel="stylesheet" href="style.css">
-  <script src="/app/login/loginCtrl.js"></script>
-  <script src="/app/login/signupCtrl.js"></script>
-  <script src="/app/login/tenantsCtrl.js"></script>
-  <script src="/app/login/messagesCtrl.js"></script>
-  <script src="/app/login/votingsCtrl.js"></script>
-  <script src="/app/login/issuesCtrl.js"></script>
+  <script src="app/app.js"></script>
+  <script src="app/login/loginCtrl.js"></script>
+  <script src="app/login/signupCtrl.js"></script>
+  <script src="app/tenants/tenantsCtrl.js"></script>
+  <script src="app/messages/messagesCtrl.js"></script>
+  <script src="app/votings/votingsCtrl.js"></script>
+  <script src="app/issues/issuesCtrl.js"></script>
+  <script src="app/overview/overviewCtrl.js"></script>
+  <script src="app/navbar/navbarCtrl.js"></script>
+  <script src="app/navbar/navbarDir.js"></script>
 
 </head>
 
 
 <body>
+<vaad-navbar></vaad-navbar>
 
-  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-    <!-- Brand -->
-    <a class="navbar-brand" href="#">אפליקציה לניהול וועדי בתים</a>
+ <ng-view></ng-view>
 
-    <!-- Toggler/collapsibe Button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-
-    <!-- Navbar links -->
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#">מבט כללי</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">דיירים</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">הודעות</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">נושאים</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">הצבעות</a>
-        </li>
-      </ul>
-      <div class="btn-login">
-        <button class="btn btn-primary m-1" type="button" data-toggle="modal" data-target="#signup">הרשמה</button>
-        <button class="btn btn-primary m-1" type="button" data-toggle="modal" data-target="#login">התחבר</button>
-      </div>
-
-    </div>
-  </nav>
-
-
+ 
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -36,6 +36,15 @@ float: left;
     width: 100%;
     border: none;
     margin-top: 0px;
+    top:0px;
+    left:0px;
+    z-index:-100;
+    /* background-size: 100% 100%; */
+    overflow: hidden;
+}
+.bg-blue{
+    background-color:  #edf5fd;
+
 }
 
 .input-group-text, .input {
@@ -72,4 +81,8 @@ float: left;
 h1{
     font-weight: 700;
     line-height: 100%;
+}
+
+.mt-5e{
+    margin-top: 5em;
 }

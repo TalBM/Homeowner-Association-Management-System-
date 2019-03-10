@@ -1,25 +1,28 @@
-var app = angular.module("vaad", ["ngRoute"]);
+var app = angular.module("vaadApp", ["ngRoute"]);
 
 app.config(function($routeProvider) {
     $routeProvider.when("/", {
         templateUrl: "app/landingpage/landingpage.html"
     }).when("/login", {
-        templateUrl: "/app/login/login.html",
+        templateUrl: "app/login/login.html",
         controller: "loginCtrl"
     }).when("/signup", {
-        templateUrl: "/app/login/signup.html",
+        templateUrl: "app/login/signup.html",
         controller: "signupCtrl"
+    }).when("/overview", {
+        templateUrl: "app/overview/overview.html",
+        controller: "overviewCtrl"
     }).when("/tenants", {
-        templateUrl: "/app/login/tenants.html",
+        templateUrl: "app/tenants/tenants.html",
         controller: "tenantsCtrl"
     }).when("/messages", {
-        templateUrl: "/app/login/messages.html",
+        templateUrl: "app/messages/messages.html",
         controller: "messagesCtrl"
     }).when("/votings", {
-        templateUrl: "/app/login/votings.html",
+        templateUrl: "app/votings/votings.html",
         controller: "votingsCtrl"
     }).when("/issues", {
-        templateUrl: "/app/login/issues.html",
+        templateUrl: "app/issues/issues.html",
         controller: "issuesCtrl"
     }).otherwise({
         redirectTo: "/"
