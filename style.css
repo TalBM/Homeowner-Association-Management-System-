@@ -119,3 +119,7 @@ h1{
     border-radius: 6px;
 }
 
+.myflexbox{
+    display: flex;
+    flex-direction: row;
+}
