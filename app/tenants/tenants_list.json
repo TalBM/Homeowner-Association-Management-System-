@@ -1,0 +1,170 @@
+[
+    [
+        {
+            "family-name": "אביבי",
+            "he-name": "אבי",
+            "she-name": "אביבה",
+            "floor": "1",
+            "dira": "1",
+            "isVaad": false,
+            "phone": "050-6010101",
+            "email": "avivim@domain.com"
+        },
+        {
+            "family-name": "בנימין",
+            "he-name": "בני",
+            "she-name": "בתיה",
+            "floor": "1",
+            "dira": "2",
+            "isVaad": false,
+            "phone": "050-6020202",
+            "email": "binyamin@domain.com"
+        },
+        {
+            "family-name": "גבריאלוב",
+            "he-name": "גבי",
+            "she-name": "גילה",
+            "floor": "1",
+            "dira": "3",
+            "isVaad": false,
+            "phone": "050-6030303",
+            "email": "gavrielovs@domain.com"
+        },
+        {
+            "family-name": "דניאלוב",
+            "he-name": "דני",
+            "she-name": "דינה",
+            "floor": "1",
+            "dira": "4",
+            "isVaad": false,
+            "phone": "050-6040404",
+            "email": "danidina@domain.com"
+        }
+    ],
+    [
+        {
+            "family-name": "הרצגובינה",
+            "he-name": "הרצל",
+            "she-name": "הילה",
+            "floor": "2",
+            "dira": "5",
+            "isVaad": false,
+            "phone": "050-6050505",
+            "email": "herzagovina@domain.com"
+        },
+        {
+            "family-name": "ויצמן",
+            "he-name": "ויקטור",
+            "she-name": "ויויאן",
+            "floor": "2",
+            "dira": "6",
+            "isVaad": false,
+            "phone": "050-6060606",
+            "email": "weizman@domain.com"
+        },
+        {
+            "family-name": "זכריה",
+            "he-name": "זיו",
+            "she-name": "זיוה",
+            "floor": "2",
+            "dira": "7",
+            "isVaad": false,
+            "phone": "050-6070707",
+            "email": "zeharia.zivs@domain.com"
+        },
+        {
+            "family-name": "חיימוב",
+            "he-name": "חן",
+            "she-name": "חניתה",
+            "floor": "2",
+            "dira": "8",
+            "isVaad": false,
+            "phone": "050-6080808",
+            "email": "haimov.hen@domain.com"
+        }
+    ],
+    [
+        {
+            "family-name": "טליאס",
+            "he-name": "טל",
+            "she-name": "טלי",
+            "floor": "3",
+            "dira": "9",
+            "isVaad": false,
+            "phone": "050-6090909",
+            "email": "talias@domain.com"
+        },
+        {
+            "family-name": "ישראלי",
+            "he-name": "ישראל",
+            "she-name": "ישראלה",
+            "floor": "3",
+            "dira": "10",
+            "isVaad": true,
+            "phone": "050-6101010",
+            "email": "israeli@domain.com"
+        },
+        {
+            "family-name": "כרמי",
+            "he-name": "כאלף",
+            "she-name": "כרמית",
+            "floor": "3",
+            "dira": "11",
+            "isVaad": false,
+            "phone": "050-6111111",
+            "email": "karmi@domain.com"
+        },
+        {
+            "family-name": "לאונידוב",
+            "he-name": "ליאור",
+            "she-name": "ליאורה",
+            "floor": "3",
+            "dira": "12",
+            "isVaad": false,
+            "phone": "050-6121212",
+            "email": "leonidov@domain.com"
+        }
+    ],
+    [
+        {
+            "family-name": "מאירסון",
+            "he-name": "מאיר",
+            "she-name": "מאיה",
+            "floor": "4",
+            "dira": "13",
+            "isVaad": false,
+            "phone": "050-6131313",
+            "email": "meirson@domain.com"
+        },
+        {
+            "family-name": "נחמני",
+            "he-name": "ניר",
+            "she-name": "נירית",
+            "floor": "4",
+            "dira": "14",
+            "isVaad": false,
+            "phone": "050-6141414",
+            "email": "nahamani@domain.com"
+        },
+        {
+            "family-name": "ספיר",
+            "he-name": "סמי",
+            "she-name": "סימונה",
+            "floor": "4",
+            "dira": "15",
+            "isVaad": false,
+            "phone": "050-6151515",
+            "email": "sapir@domain.com"
+        },
+        {
+            "family-name": "עבאדי",
+            "he-name": "עדי",
+            "she-name": "עדנה",
+            "floor": "4",
+            "dira": "16",
+            "isVaad": false,
+            "phone": "050-6161616",
+            "email": "abadi@domain.com"
+        }
+    ]
+]

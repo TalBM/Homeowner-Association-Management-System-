@@ -6,11 +6,11 @@
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, p {
-text-align: right;
+    text-align: right;
 }
 
 .wellcom{
-color: white;
+    color: white;
 }
 
 .navbar-brand {
@@ -18,9 +18,9 @@ color: white;
 }
 
 .btn-login {
-padding:.3em .5em;
-margin: 0.5em;
-float: left;
+    padding:.3em .5em;
+    margin: 0.5em;
+    float: left;
 }
 
 .btn {
@@ -46,6 +46,7 @@ float: left;
     background-color:  #edf5fd;
 
 }
+
 
 .input-group-text, .input {
     border-top-left-radius: 0;
@@ -95,7 +96,7 @@ h1{
 }
 
 .msg-txt{
-line-height: 1.4em;
+    line-height: 1.4em;
     font-size: 1.2em;
     margin-top: 5px;
 }
@@ -106,6 +107,10 @@ line-height: 1.4em;
 
 }
 
-.msg-bg{
-
+.add-msg-bg{
+    background-color: #e7f3ff;
+    border: 1px solid #d2e8ff;
+    padding: 20px;
+    border-radius: 6px;
 }
+
