@@ -27,6 +27,11 @@
     padding:.3em .5em;
     }
 
+.btn-delete{
+    padding:.05em .3em;
+    margin-top: 5px;
+}
+
 .bg-img{
     background-image: url(https://s3-eu-west-1.amazonaws.com/media.madlan.co.il/property/zone_4c497874-0e55-49ae-ad9d-96d3a8f45227.jpg);
     background-repeat: no-repeat;

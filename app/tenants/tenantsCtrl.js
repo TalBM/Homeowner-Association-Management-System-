@@ -9,6 +9,7 @@ app.controller("tenantsCtrl", function ($scope, $log, $http) {
         this.isVaad = isVaad;
         this.phone = phone;
         this.email = email;
+        this.show = true;
     }
 
 
@@ -25,8 +26,19 @@ $scope.tenantsArray = [];
         
     })
 
-  $scope.test=$scope.tenantsArray; 
-console.log($scope.test)
+    $scope.deleteTenant =function(tenant){
+        tenant.show = false;
+        // var pos=$scope.tenantsArray.indexOf(tenant);
+        // if (pos>-1){
+        //     $scope.tenantsArray.splice(pos, 1)
+        // }
+
+    }
+
+    $scope.updateTenant=function(tenant){
+
+    }
+
 
 });
 
