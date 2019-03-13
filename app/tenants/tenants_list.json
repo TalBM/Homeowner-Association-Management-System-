@@ -1,9 +1,9 @@
 [
     [
         {
-            "family-name": "אביבי",
-            "he-name": "אבי",
-            "she-name": "אביבה",
+            "familyName": "אביבי",
+            "heName": "אבי",
+            "sheName": "אביבה",
             "floor": "1",
             "dira": "1",
             "isVaad": false,
@@ -11,9 +11,9 @@
             "email": "avivim@domain.com"
         },
         {
-            "family-name": "בנימין",
-            "he-name": "בני",
-            "she-name": "בתיה",
+            "familyName": "בנימין",
+            "heName": "בני",
+            "sheName": "בתיה",
             "floor": "1",
             "dira": "2",
             "isVaad": false,
@@ -21,9 +21,9 @@
             "email": "binyamin@domain.com"
         },
         {
-            "family-name": "גבריאלוב",
-            "he-name": "גבי",
-            "she-name": "גילה",
+            "familyName": "גבריאלוב",
+            "heName": "גבי",
+            "sheName": "גילה",
             "floor": "1",
             "dira": "3",
             "isVaad": false,
@@ -31,9 +31,9 @@
             "email": "gavrielovs@domain.com"
         },
         {
-            "family-name": "דניאלוב",
-            "he-name": "דני",
-            "she-name": "דינה",
+            "familyName": "דניאלוב",
+            "heName": "דני",
+            "sheName": "דינה",
             "floor": "1",
             "dira": "4",
             "isVaad": false,
@@ -43,9 +43,9 @@
     ],
     [
         {
-            "family-name": "הרצגובינה",
-            "he-name": "הרצל",
-            "she-name": "הילה",
+            "familyName": "הרצגובינה",
+            "heName": "הרצל",
+            "sheName": "הילה",
             "floor": "2",
             "dira": "5",
             "isVaad": false,
@@ -53,9 +53,9 @@
             "email": "herzagovina@domain.com"
         },
         {
-            "family-name": "ויצמן",
-            "he-name": "ויקטור",
-            "she-name": "ויויאן",
+            "familyName": "ויצמן",
+            "heName": "ויקטור",
+            "sheName": "ויויאן",
             "floor": "2",
             "dira": "6",
             "isVaad": false,
@@ -63,9 +63,9 @@
             "email": "weizman@domain.com"
         },
         {
-            "family-name": "זכריה",
-            "he-name": "זיו",
-            "she-name": "זיוה",
+            "familyName": "זכריה",
+            "heName": "זיו",
+            "sheName": "זיוה",
             "floor": "2",
             "dira": "7",
             "isVaad": false,
@@ -73,9 +73,9 @@
             "email": "zeharia.zivs@domain.com"
         },
         {
-            "family-name": "חיימוב",
-            "he-name": "חן",
-            "she-name": "חניתה",
+            "familyName": "חיימוב",
+            "heName": "חן",
+            "sheName": "חניתה",
             "floor": "2",
             "dira": "8",
             "isVaad": false,
@@ -85,9 +85,9 @@
     ],
     [
         {
-            "family-name": "טליאס",
-            "he-name": "טל",
-            "she-name": "טלי",
+            "familyName": "טליאס",
+            "heName": "טל",
+            "sheName": "טלי",
             "floor": "3",
             "dira": "9",
             "isVaad": false,
@@ -95,9 +95,9 @@
             "email": "talias@domain.com"
         },
         {
-            "family-name": "ישראלי",
-            "he-name": "ישראל",
-            "she-name": "ישראלה",
+            "familyName": "ישראלי",
+            "heName": "ישראל",
+            "sheName": "ישראלה",
             "floor": "3",
             "dira": "10",
             "isVaad": true,
@@ -105,9 +105,9 @@
             "email": "israeli@domain.com"
         },
         {
-            "family-name": "כרמי",
-            "he-name": "כאלף",
-            "she-name": "כרמית",
+            "familyName": "כרמי",
+            "heName": "כאלף",
+            "sheName": "כרמית",
             "floor": "3",
             "dira": "11",
             "isVaad": false,
@@ -115,9 +115,9 @@
             "email": "karmi@domain.com"
         },
         {
-            "family-name": "לאונידוב",
-            "he-name": "ליאור",
-            "she-name": "ליאורה",
+            "familyName": "לאונידוב",
+            "heName": "ליאור",
+            "sheName": "ליאורה",
             "floor": "3",
             "dira": "12",
             "isVaad": false,
@@ -127,9 +127,9 @@
     ],
     [
         {
-            "family-name": "מאירסון",
-            "he-name": "מאיר",
-            "she-name": "מאיה",
+            "familyName": "מאירסון",
+            "heName": "מאיר",
+            "sheName": "מאיה",
             "floor": "4",
             "dira": "13",
             "isVaad": false,
@@ -137,9 +137,9 @@
             "email": "meirson@domain.com"
         },
         {
-            "family-name": "נחמני",
-            "he-name": "ניר",
-            "she-name": "נירית",
+            "familyName": "נחמני",
+            "heName": "ניר",
+            "sheName": "נירית",
             "floor": "4",
             "dira": "14",
             "isVaad": false,
@@ -147,9 +147,9 @@
             "email": "nahamani@domain.com"
         },
         {
-            "family-name": "ספיר",
-            "he-name": "סמי",
-            "she-name": "סימונה",
+            "familyName": "ספיר",
+            "heName": "סמי",
+            "sheName": "סימונה",
             "floor": "4",
             "dira": "15",
             "isVaad": false,
@@ -157,9 +157,9 @@
             "email": "sapir@domain.com"
         },
         {
-            "family-name": "עבאדי",
-            "he-name": "עדי",
-            "she-name": "עדנה",
+            "familyName": "עבאדי",
+            "heName": "עדי",
+            "sheName": "עדנה",
             "floor": "4",
             "dira": "16",
             "isVaad": false,

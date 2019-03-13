@@ -10,8 +10,11 @@
         </div>
         <label class="label-default rtl">חפש הודעה:</label>
         <input class="form-control w-100 mb-3" type="text" ng-model="msgfilterBy"></input>
-  
-        <msg-card ng-repeat="msg in msgArray | orderBy:msg.created | filter:filterMsg as results"></msg-card>
+        <!-- <div ng-repeat="msg in msgArray | orderBy:msg.created:reverse">
+            {{msg.created}}
+        </div> -->
+        <!-- <msg-card ng-repeat="msg in msgArray | orderBy:msg.created: date:reverse | filter:filterMsg as results " ></msg-card> -->
+        <msg-card ng-repeat="msg in msgArray | orderBy: '-created' | filter:filterMsg as results " ></msg-card>
          <!--   "as results" is a new array of filtered msgs   -->
         <div ng-show="results.length === 0">
                 <p class="text-warning">לא נמצאו תוצאות לערך שחיפשת</p>

@@ -4,7 +4,7 @@
         "postedBy" : "ישראל ישראלי",
         "dira": "10",
         "isVaad" : true,
-        "created" : "19-12-2018"
+        "created" : "10-19-2018"
 
     }, 
 
@@ -13,7 +13,7 @@
         "postedBy" : "גדי גבריאלוב",
         "dira": "3",
         "isVaad" : false,
-        "created" : "19-12-2018"
+        "created" : "08-01-2018"
 
     }, 
     {
@@ -21,7 +21,7 @@
         "postedBy" : "בני ובתיה בנימינוב",
         "dira": "2",
         "isVaad" : false,
-        "created" : "19-12-2018"
+        "created" : "12-14-2015"
 
     }, 
     {
@@ -29,7 +29,7 @@
         "postedBy" : "גדי גבריאלוב",
         "dira": "3",
         "isVaad" : false,
-        "created" : "18-12-2018"
+        "created" : "06-21-2018"
 
     }, 
 
@@ -38,7 +38,7 @@
         "postedBy" : "בני ובתיה בנימינוב",
         "dira": "2",
         "isVaad" : false,
-        "created" : "17-12-2018"
+        "created" : "04-11-2012"
 
     },    
 
@@ -47,7 +47,7 @@
         "postedBy" : "אביבה לוינסון",
         "dira": "1",
         "isVaad" : false,
-        "created" : "16-12-2018"
+        "created" : "12-16-2017"
     },
 
     {
@@ -55,7 +55,7 @@
         "postedBy" : "אבי לוינסון",
         "dira": "1",
         "isVaad" : false,
-        "created" : "16-12-2018"
+        "created" : "03-16-2015"
     },
     
     {
@@ -63,6 +63,6 @@
         "postedBy" : "ישראל ישראלי",
         "dira": "10",
         "isVaad" : true,
-        "created" : "15-12-2018"
+        "created" : "12-15-2018"
     }
 ]

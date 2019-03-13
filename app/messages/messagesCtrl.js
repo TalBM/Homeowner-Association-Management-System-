@@ -15,7 +15,24 @@ app.controller("messagesCtrl", function ($scope, $log, $http) {
 
     $http.get("app/messages/msg.json").then(function (result) {
         //success: add json array into 'actorsArray' array
-        $scope.msgArray = result.data;
+
+        // angular.forEach(result.data, element => {
+        //     element = new Message (element.msg, element.postedBy, element.dira, element.isVaad, element.created);
+        //     element.created = new Date(element.created);    
+        // });
+
+        for(var i=0; i< result.data.length; i++){
+            var element=result.data[i];
+            element = new Message (element.msg, element.postedBy, element.dira, element.isVaad, element.created);
+            element.created = new Date(element.created);  
+            $scope.msgArray.push(element);
+        }
+
+        $scope.msgArray.sort(function(a,b){
+            return a.created - b.created;
+        });
+
+        
     }, function (error) {
         //error: print to console an error message with the status (e.g. 404 or 504...)
         console.error(error.status);
@@ -50,8 +67,11 @@ app.controller("messagesCtrl", function ($scope, $log, $http) {
     };
 
     $scope.addNewMsg = function() {
-        var newMsg= new Message($scope.newMsg)
-        $scope.msgArray.push(newMsg)
+        var msg= new Message($scope.newMsg);
+        msg.created=new Date(msg.created); 
+        $scope.msgArray.push(msg);  
+
+        
     }
 
 });
