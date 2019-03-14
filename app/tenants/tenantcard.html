@@ -34,7 +34,8 @@
                 <div>
                     <button type="button" class="btn-delete btn" ng-click="deleteTenant(tenant)">הסר דייר</button>
                     <button type="button" class="btn-delete btn" ng-click="updateTenant(tenant)">עדכון פרטים</button>
-                    <br><br>
+                    <br>
+                    <br>
                 </div>
 
                 <div ng-hide="tenant.update">
@@ -53,13 +54,16 @@
 
 
                 <div class="card-body" ng-show="tenant.update">
-                    <p class="text-right">עדכון פרטי דייר</p>
+                    <p class="text-right"> עדכון פרטי דייר
+                        <a class="mr-3" href="" ng-click="clearTenant(tenant)">נקה פרטים</a>
+                    </p>
+
                     <div>
 
                         <input class="form-control" ng-model="updateData.editedFamily" placeholder="שם משפחה" type="text">
                         <input class="form-control" ng-model="updateData.editedShe" placeholder="שם האשה" type="text">
                         <input class="form-control" ng-model="updateData.editedHe" placeholder="שם הבעל" type="text">
-                        <input class="form-control" ng-model="updateData.editedPhone" placeholder="טלפון נייד" type="number">
+                        <input class="form-control" ng-model="updateData.editedPhone" placeholder="טלפון נייד" type="text">
                         <input class="form-control" ng-model="updateData.editedEmail" placeholder="דוא'ל" type="email">
                         <input type="checkbox" ng-model="updateData.editedVaad" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label mr-4" for="exampleCheck1">וועד הבית</label>
