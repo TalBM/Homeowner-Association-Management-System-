@@ -87,12 +87,21 @@ h1, .h1{
     background-color: #e7f3ff;
     border: 1px solid #d2e8ff;
     border-left: 0px;
-    max-width: 60px;
+    min-width: 45px;
+
 }
+
+.input-vote{
+    width: 150px;
+}
+
 .form-control, .custom-select {
     border: 1px solid #d2e8ff;
     border-radius: 0;
     margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 1.1em;
+    color: rgb(90, 125, 189);
 }
 
 

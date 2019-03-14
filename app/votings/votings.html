@@ -4,19 +4,46 @@
 
     <p class="h1">נושאים להצבעה</p>
     <div>
-            <input class="form-control" ng-model="updateData.editedVotingTitle" placeholder="כותרת" type="text">
-            <input class="form-control" ng-model="updateData.editedVoteInfo" placeholder="פרטים נוספים" type="text">
-            <input class="form-control" ng-model="updateData.editedVoteDate" placeholder="תאריך סיום ההצבעה" type="date">
-            <input class="form-control" ng-model="updateData.editedPhone" placeholder="פריט להצבעה" type="text">
-            <button type="button" ng-click="addNewVote(newVote)" class="btn btn-primary btn-block">צור חדש</button>
+
+        <div class="input-group mb-1">
+            <div class="input-group-prepend">
+                <span class="input-group-text input-vote" id="basic-addon3">כותרת</span>
+            </div>
+            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
         </div>
+        <div class="input-group mb-1">
+            <div class="input-group-prepend">
+                <span class="input-group-text input-vote" id="basic-addon3">פרטים נוספים</span>
+            </div>
+            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+        </div>
+        <div class="input-group mb-1">
+            <div class="input-group-prepend">
+                <span class="input-group-text input-vote" id="basic-addon3">תאריך סיום ההצבעה</span>
+            </div>
+            <input type="date" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+        </div>
+        <div class="input-group mb-1">
+            <div class="input-group-prepend">
+                <span class="input-group-text input-vote" id="basic-addon3">פריט להצבעה</span>
+            </div>
+            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+        </div>
+        
+        <input class="form-control" ng-model="updateData.editedVotingTitle" placeholder="כותרת" type="text">
+        <input class="form-control" ng-model="updateData.editedVoteDetails" placeholder="פרטים נוספים" type="text">
+        <input class="form-control" ng-model="updateData.editedVoteDate" placeholder="תאריך סיום ההצבעה" type="date">
+        <input class="form-control" ng-model="updateData.editedPhone" placeholder="פריט להצבעה" type="text">
+        <button type="button" ng-click="addNewVote()" class="btn btn-primary btn-block">צור חדש</button>
+    </div>
 
     <!-- {{data}} -->
     <!-- {{labels}} -->
     <!-- {{options}} -->
+    <div class="row mt-5">
+        <canvas id="pie" class="chart chart-pie" chart-data="updateChartData()" chart-labels="labels" chart-options="options">
+        </canvas>
+    </div>
 
-    <canvas id="pie" class="chart chart-pie"
-        chart-data="updateChartData()" chart-labels="labels" chart-options="options">
-    </canvas> 
 
 </div>

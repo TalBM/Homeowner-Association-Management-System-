@@ -31,13 +31,22 @@ app.controller("tenantsCtrl", function ($scope, $log, $http, tenantsService) {
     $scope.clearTenant = function (tenant) {
         $scope.updateData = {};
 
+        // Object.key is empty..?
+       
+
     }
 
 
     $scope.updateData = {};// אתחול משתנה חדש כי המשתנים שבתוך הפונקציה לא אותחלו
     $scope.updateTenantSave = function (tenant) {
-        if (($scope.updateData.editedFamily === "") || ($scope.updateData.editedHe === "") || ($scope.updateData.editedShe === "")) {
-            return tenant;
+        debugger
+
+        if($scope.updateData === {}) {
+            return
+        } else if (  ($scope.updateData.editedFamily.length ===0) || 
+            ($scope.updateData.editedHe.length ===0) || 
+            ($scope.updateData.editedShe.length ===0)) {
+            return
         } else {
             tenant.familyName = $scope.updateData.editedFamily;
             tenant.heName = $scope.updateData.editedHe;
