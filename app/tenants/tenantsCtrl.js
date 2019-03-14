@@ -17,6 +17,7 @@ app.controller("tenantsCtrl", function ($scope, $log, $http, tenantsService) {
         // }
     }
 
+    //  הצגת המידע על הדיירים בתוך השדות
     $scope.updateTenant = function (tenant) {
         tenant.update = !tenant.update;
         $scope.updateData.editedFamily = tenant.familyName;
@@ -27,13 +28,14 @@ app.controller("tenantsCtrl", function ($scope, $log, $http, tenantsService) {
         $scope.updateData.editedEmail = tenant.email;
     }
 
+    //   ניקוי השדות  
     $scope.clearTenant = function (tenant) {
         $scope.updateData = {};
 
     }
 
 
-    $scope.updateData = {};//  כי המשתנים בפונקציה לא אותחלו
+    $scope.updateData = {};// אתחול משתנה חדש כי המשתנים שבתוך הפונקציה לא אותחלו
     $scope.updateTenantSave = function (tenant) {
         if (($scope.updateData.editedFamily === "") || ($scope.updateData.editedHe === "") || ($scope.updateData.editedShe === "")) {
             return tenant;
