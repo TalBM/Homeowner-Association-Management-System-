@@ -10,6 +10,7 @@ app.controller("tenantsCtrl", function ($scope, $log, $http) {
         this.phone = phone;
         this.email = email;
         this.show = true;
+        this.update=false;
     }
 
 
@@ -34,11 +35,23 @@ $scope.tenantsArray = [];
         // }
 
     }
-
+    
     $scope.updateTenant=function(tenant){
-
+        tenant.update=!tenant.update;
+        $scope.updateData = {};
     }
 
+
+    $scope.updateData = {};
+$scope.updateTenantSave=function(tenant){
+    tenant.familyName = $scope.updateData.editedFamily;
+    tenant.heName = $scope.updateData.editedHe;
+    tenant.sheName = $scope.updateData.editedShe;
+    tenant.isVaad = $scope.updateData.editedVaad;
+    tenant.phone = $scope.updateData.editedPhone;
+    tenant.email = $scope.updateData.editedEmail;
+    tenant.update=!tenant.update;
+    }
 
 });
 

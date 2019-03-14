@@ -37,23 +37,25 @@
                 </p>
                 <p class="mb-0">טלפון: {{tenant.phone}}</p>
                 <p class="mb-0">דוא'ל: {{tenant.email}}</p>
-                <button type="button" ng-show={{!tenant.isVaad}} class="btn-delete btn" ng-click="deleteTenant(tenant)">הסר דייר</button>
-                <button type="button" ng-show={{!tenant.isVaad}} class="btn-delete btn" ng-click="updateTenant(tenant)">עדכון פרטים</button>
+                           
+        <div>
+             <button type="button"  class="btn-delete btn" ng-click="deleteTenant(tenant)">הסר דייר</button>
+                <button type="button" class="btn-delete btn" ng-click="updateTenant(tenant)">עדכון פרטים</button>
+        </div>
 
-
-            </div>
-            <div class="card-body">
+            <div class="card-body" ng-show="tenant.update">
                 <p class="text-right">עדכון פרטי דייר</p>
                 <div>
-                    <input name="" class="form-control" ng-model="editedFamily" placeholder="שם משפחה" type="text">
-                    <input name="" class="form-control" ng-model="editedShe" placeholder="שם האשה" type="text">
-                    <input name="" class="form-control" ng-model="editedHe" placeholder="שם הבעל" type="text">
-                    <input name="" class="form-control" ng-model="editedPhone" placeholder="טלפון נייד" type="number">
-                    <input name="" class="form-control" ng-model="editedEmail" placeholder="דוא'ל" type="email">
-                    <input type="checkbox" ng-model="editedVaad" class="form-check-input" id="exampleCheck1">
+                    
+                    <input class="form-control" ng-model="updateData.editedFamily" placeholder="שם משפחה" type="text">
+                    <input class="form-control" ng-model="updateData.editedShe" placeholder="שם האשה" type="text">
+                    <input class="form-control" ng-model="updateData.editedHe" placeholder="שם הבעל" type="text">
+                    <input class="form-control" ng-model="updateData.editedPhone" placeholder="טלפון נייד" type="number">
+                    <input class="form-control" ng-model="updateData.editedEmail" placeholder="דוא'ל" type="email">
+                    <input type="checkbox" ng-model="updateData.editedVaad" class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label mr-4" for="exampleCheck1">וועד הבית</label>
                     <br><br>
-                    <button type="button" class="btn btn-primary btn-block">שמור</button>
+                    <button type="button" ng-click="updateTenantSave(tenant)" class="btn btn-primary btn-block">שמור</button>
                 </div>
 
 
