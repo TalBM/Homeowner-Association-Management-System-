@@ -11,6 +11,14 @@ body{
     text-align: right;
 }
 
+h1, .h1{
+    font-weight: 700;
+    line-height: 110%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    
+}
+
 .wellcom{
     color: white;
 }
@@ -84,15 +92,9 @@ body{
 .form-control, .custom-select {
     border: 1px solid #d2e8ff;
     border-radius: 0;
+    margin-bottom: 5px;
 }
 
-h1{
-    font-weight: 700;
-    line-height: 100%;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    
-}
 
 .mt-5e{
     margin-top: 5em;

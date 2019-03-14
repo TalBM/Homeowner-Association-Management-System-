@@ -1,6 +1,15 @@
 <div class="container">
 
-    <h1>this is voting {{test}}</h1>
+    <!-- <h1>this is voting {{test}}</h1> -->
+
+    <p class="h1">נושאים להצבעה</p>
+    <div>
+            <input class="form-control" ng-model="updateData.editedVotingTitle" placeholder="כותרת" type="text">
+            <input class="form-control" ng-model="updateData.editedVoteInfo" placeholder="פרטים נוספים" type="text">
+            <input class="form-control" ng-model="updateData.editedVoteDate" placeholder="תאריך סיום ההצבעה" type="date">
+            <input class="form-control" ng-model="updateData.editedPhone" placeholder="פריט להצבעה" type="text">
+            <button type="button" ng-click="addNewVote(newVote)" class="btn btn-primary btn-block">צור חדש</button>
+        </div>
 
     <!-- {{data}} -->
     <!-- {{labels}} -->

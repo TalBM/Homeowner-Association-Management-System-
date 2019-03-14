@@ -11,8 +11,6 @@ app.controller("votingsCtrl", function ($scope, $log, $http) {
     }
   }
   
-  $scope.labels = ["varOne", "varTwo"];
-
   var testArr = [100, 40];
   $scope.updateChartData = function() {
     console.log($scope.data);
@@ -30,7 +28,7 @@ app.controller("votingsCtrl", function ($scope, $log, $http) {
     return testArr;
   }
   
-  
+  $scope.labels = ["varOne", "varTwo"];
   $scope.data = [33, 12];
   
 
