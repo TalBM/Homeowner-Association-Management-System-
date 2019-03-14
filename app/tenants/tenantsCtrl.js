@@ -1,6 +1,5 @@
 app.controller("tenantsCtrl", function ($scope, $log, $http, tenantsService) {
 
-
     // Loading the tenants
     $scope.tenantsArray = [];
     tenantsService.getTenants().then(function (tenants) {

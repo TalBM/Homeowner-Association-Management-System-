@@ -1,4 +1,4 @@
-var app = angular.module("vaadApp", ["ngRoute"]);
+var app = angular.module("vaadApp", ["ngRoute", "chart.js"]);
 
 app.config(function($routeProvider) {
     $routeProvider.when("/", {
