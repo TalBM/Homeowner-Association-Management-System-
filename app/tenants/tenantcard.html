@@ -21,45 +21,55 @@
         <div class="card-header" id="heading{{tenant.dira}}">
             <h5 class="mb-0">
                 <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{tenant.dira}}" aria-expanded="true" aria-controls="collapseOne">
-                    <h4 class="mb-0">דירה מספר: {{tenant.dira}}</h4>
+                    <h4 class="mb-0">דירה {{tenant.dira}} : משפחת {{tenant.familyName}}</h4>
                 </button>
             </h5>
         </div>
 
-        <div id="collapse{{tenant.dira}}" class="collapse myflexbox" aria-labelledby="heading{{tenant.dira}}" data-parent="#accordion"><!--add: class="show" -->
+
+        <div id="collapse{{tenant.dira}}" class="collapse myflexbox" aria-labelledby="heading{{tenant.dira}}" data-parent="#accordion">
+            <!--add: class="show" -->
             <div class="card-body">
 
-                <h4 class="mb-0 mb-2">{{tenant.familyName+" "+tenant.sheName+" ו"+tenant.heName}}</h4>
-                <p class="mb-0">
-                    <i ng-show={{tenant.isVaad}} class="fa fa-user">
-                        <span class="m-2 mr-2">ועד הבית</span>
-                    </i>
-                </p>
-                <p class="mb-0">טלפון: {{tenant.phone}}</p>
-                <p class="mb-0">דוא'ל: {{tenant.email}}</p>
-                           
-        <div>
-             <button type="button"  class="btn-delete btn" ng-click="deleteTenant(tenant)">הסר דייר</button>
-                <button type="button" class="btn-delete btn" ng-click="updateTenant(tenant)">עדכון פרטים</button>
-        </div>
-
-            <div class="card-body" ng-show="tenant.update">
-                <p class="text-right">עדכון פרטי דייר</p>
                 <div>
-                    
-                    <input class="form-control" ng-model="updateData.editedFamily" placeholder="שם משפחה" type="text">
-                    <input class="form-control" ng-model="updateData.editedShe" placeholder="שם האשה" type="text">
-                    <input class="form-control" ng-model="updateData.editedHe" placeholder="שם הבעל" type="text">
-                    <input class="form-control" ng-model="updateData.editedPhone" placeholder="טלפון נייד" type="number">
-                    <input class="form-control" ng-model="updateData.editedEmail" placeholder="דוא'ל" type="email">
-                    <input type="checkbox" ng-model="updateData.editedVaad" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label mr-4" for="exampleCheck1">וועד הבית</label>
+                    <button type="button" class="btn-delete btn" ng-click="deleteTenant(tenant)">הסר דייר</button>
+                    <button type="button" class="btn-delete btn" ng-click="updateTenant(tenant)">עדכון פרטים</button>
                     <br><br>
-                    <button type="button" ng-click="updateTenantSave(tenant)" class="btn btn-primary btn-block">שמור</button>
+                </div>
+
+                <div ng-hide="tenant.update">
+                    <h4 class="mb-0 mb-2">{{tenant.familyName+" "+tenant.sheName+" ו"+tenant.heName}}</h4>
+                    <p class="mb-0">
+                        <i ng-show={{tenant.isVaad}} class="fa fa-user">
+                            <span class="m-2 mr-2">ועד הבית</span>
+                        </i>
+                    </p>
+                    <p class="mb-0">טלפון: {{tenant.phone}}</p>
+                    <p class="mb-0">דוא'ל: {{tenant.email}}</p>
+
                 </div>
 
 
+
+
+                <div class="card-body" ng-show="tenant.update">
+                    <p class="text-right">עדכון פרטי דייר</p>
+                    <div>
+
+                        <input class="form-control" ng-model="updateData.editedFamily" placeholder="שם משפחה" type="text">
+                        <input class="form-control" ng-model="updateData.editedShe" placeholder="שם האשה" type="text">
+                        <input class="form-control" ng-model="updateData.editedHe" placeholder="שם הבעל" type="text">
+                        <input class="form-control" ng-model="updateData.editedPhone" placeholder="טלפון נייד" type="number">
+                        <input class="form-control" ng-model="updateData.editedEmail" placeholder="דוא'ל" type="email">
+                        <input type="checkbox" ng-model="updateData.editedVaad" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label mr-4" for="exampleCheck1">וועד הבית</label>
+                        <br>
+                        <br>
+                        <button type="button" ng-click="updateTenantSave(tenant)" class="btn btn-primary btn-block">שמור</button>
+                    </div>
+
+
+                </div>
             </div>
         </div>
     </div>
-</div>
