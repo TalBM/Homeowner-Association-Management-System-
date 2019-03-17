@@ -4,20 +4,24 @@
         <h1>הודעות</h1>
         <div class="mb-3 add-msg-bg">
             <label class="label-default rtl">הוספת הודעה:</label>
-            <input class="form-control " type="text" ng-model="newMsg"></input>
-            <button class="btn btn-primary" type="button" ng-click="addNewMsg()">שלח</button>
-            <!-- <a class="btn btn-primary" ng-click="addNewMsg">שלח</a> -->
+            <div class="input-group">
+                <input class="form-control " type="text" ng-model="newMsg"></input>
+                <button class="btn btn-primary px-4" type="button" ng-click="addNewMsg()">שלח</button>
+                <!-- <a class="btn btn-primary" ng-click="addNewMsg">שלח</a> -->
+            </div>
+
         </div>
+
         <label class="label-default rtl">חפש הודעה:</label>
         <input class="form-control w-100 mb-3" type="text" ng-model="msgfilterBy"></input>
         <!-- <div ng-repeat="msg in msgArray | orderBy:msg.created:reverse">
             {{msg.created}}
         </div> -->
         <!-- <msg-card ng-repeat="msg in msgArray | orderBy:msg.created: date:reverse | filter:filterMsg as results " ></msg-card> -->
-        <msg-card ng-repeat="msg in msgArray | orderBy: '-created' | filter:filterMsg as results " ></msg-card>
-         <!--   "as results" is a new array of filtered msgs   -->
+        <msg-card ng-repeat="msg in msgArray | orderBy: '-created' | filter:filterMsg as results "></msg-card>
+        <!--   "as results" is a new array of filtered msgs   -->
         <div ng-show="results.length === 0">
-                <p class="text-warning">לא נמצאו תוצאות לערך שחיפשת</p>
-            </div>
+            <p class="text-warning">לא נמצאו תוצאות לערך שחיפשת</p>
+        </div>
     </div>
 </div>

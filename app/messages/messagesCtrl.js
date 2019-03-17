@@ -67,11 +67,14 @@ app.controller("messagesCtrl", function ($scope, $log, $http) {
     };
 
     $scope.addNewMsg = function() {
-        var msg= new Message($scope.newMsg);
+        if ($scope.newMsg.length===0){
+            return
+        }else{
+            var msg= new Message($scope.newMsg);
         msg.created=new Date(msg.created); 
-        $scope.msgArray.push(msg);  
-
-        
+        $scope.msgArray.push(msg);    
+        }
+             
     }
 
 });
