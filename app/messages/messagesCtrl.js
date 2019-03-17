@@ -72,7 +72,8 @@ app.controller("messagesCtrl", function ($scope, $log, $http) {
         }else{
             var msg= new Message($scope.newMsg);
         msg.created=new Date(msg.created); 
-        $scope.msgArray.push(msg);    
+        $scope.msgArray.push(msg);
+        $scope.newMsg="";    
         }
              
     }
