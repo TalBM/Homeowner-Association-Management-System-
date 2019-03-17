@@ -119,9 +119,10 @@ h1, .h1{
     margin-top: 5px;
 }
 
-.msg-info{
+.msg-info, .vote-label{
     color: rgb(90, 125, 189);
     font-size: 1em;
+    text-align: right;
 
 }
 
@@ -141,3 +142,4 @@ h1, .h1{
     float: right ;
     margin-top: 7px;
 }
+

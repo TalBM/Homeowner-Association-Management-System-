@@ -2,7 +2,7 @@ app.controller("votingsCtrl", function ($scope, $log, $http) {
 
     // $scope.test = "---הצבעות OK---";
 
-    // -----  constructor
+    // -----  constructor: vote
     function Vote(createdBy, title, details, DueDate, voteOptions, votes) {
         this.createdBy = createdBy || "האיש מוועד הבית";
         this.title = title;
@@ -10,13 +10,20 @@ app.controller("votingsCtrl", function ($scope, $log, $http) {
         this.DueDate = DueDate;
         this.voteOptions = voteOptions;
         this.votes = votes;
+        this.data = [];
+        this.labels = voteOptions;
+        this.percents = [];
+        this.stat = [];
+        this.fullstat = {};
         this.show = true;
         this.closed = false;
+
     }
+
 
     //----------- adding .json file to the array-------------
     $scope.voteArray = [];
-    
+
     $http.get("app/votings/votingList.json").then(function (result) {
 
         for (var i = 0; i < result.data.length; i++) {
@@ -28,57 +35,58 @@ app.controller("votingsCtrl", function ($scope, $log, $http) {
                 element.DueDate,
                 element.voteOptions,
                 element.votes,
+
             );
             // element.created = new Date(element.created);  
             $scope.voteArray.push(element);
-           $scope.labels = element.voteOptions;
+            // $scope.vote.labels.push(element.voteOptions);
 
 
-           /// 1) put zeros in $scope.data (as the number of labels)
-           for (var z = 0; z < element.voteOptions.length; z++) {
-            $scope.data.push(0)
-           }
-           // 2) Loops over votes and increase $scope.data[votes[j].vote]
-           for (var j = 0; j < element.votes.length; j++) {
-               var voteIndex=element.votes[j].vote;
-            $scope.data[voteIndex]++
-           }
-           
-        
+            /// 1) put zeros in $scope.data (as the number of labels)
+            for (var z = 0; z < element.voteOptions.length; z++) {
+                element.data.push(0)
+            }
+            // 2) Loops over votes and increase $scope.data[votes[j].vote]
+            for (var j = 0; j < element.votes.length; j++) {
+                var voteIndex = element.votes[j].vote;
+                element.data[voteIndex]++
+            }
+            // 3) calculating the percentage of each data
+            for (var f = 0; f < element.data.length; f++) {
+                var newPercent = Math.round(element.data[f] / element.votes.length * 100);
+                element.percents.push(newPercent);
+                element.stat.push(element.labels[f] + "  -  " + element.data[f] + " מתוך " + element.votes.length + " (" + element.percents[f] + "%" + ")");
+
+
+            }
+
+
         }
-
     });
 
-// -----------------------
+    // -----------------------
 
-// Chart
-        $scope.options = {
-            legend: {
-                display: true,
-                position: 'right',
-            },
-            // text: $scope.voteArray[0].title,
-            
-        }
-        
-        // var testArr = [100, 40];
-        // $scope.updateChartData = function () {
-        //     console.log($scope.data);
-        //     var varOne = 100;
-        //     var varTwo = 40;
-        //     return testArr;
-        // }
-        $scope.voteLabels=[];
-        $scope.labels = [];// ["varOne", "varTwo"];//
-        $scope.data = []//[33, 12, 22];
+    // Chart
+    // $scope.options = {  legend: {display: true,position: 'right',},    }
 
-        // $scope.addVoteLabels=function(label){
-        //     for (i=0; i<=$scope.voteArray.length; i++){
-        //         $scope.labels.push($scope.voteArray[i]) 
-        //     }
-        // }
+    // var testArr = [100, 40];
+    // $scope.updateChartData = function () {
+    //     console.log($scope.data);
+    //     var varOne = 100;
+    //     var varTwo = 40;
+    //     return testArr;
+    // }
+    // $scope.voteLabels = [];
+    // $scope.labels = []; // ["varOne", "varTwo"];//
+    // $scope.data = [] //[33, 12, 22];
 
-// -----------------------
+    // $scope.addVoteLabels=function(label){
+    //     for (i=0; i<=$scope.voteArray.length; i++){
+    //         $scope.labels.push($scope.voteArray[i]) 
+    //     }
+    // }
+
+    // -----------------------
 
     // creating new vote
     // $scope.addNewVote=function(element){
@@ -86,16 +94,17 @@ app.controller("votingsCtrl", function ($scope, $log, $http) {
     // );
     // }
 
-//---------- vote input -----------
-$scope.voteInputArray=["",""];
 
-$scope.addNewInputVote=function(){
-    $scope.voteInputArray.push("");
-}
-$scope.deleteNewInputVote=function(index){
-   $scope.voteInputArray.splice(index,1);
-}
+    //---------- vote input -----------
+    $scope.voteInputArray = ["", ""];
+
+    $scope.addNewInputVote = function () {
+        $scope.voteInputArray.push("");
+    }
+    $scope.deleteNewInputVote = function (index) {
+        $scope.voteInputArray.splice(index, 1);
+    }
 
 
 
-    }); //controller
+}); //controller
