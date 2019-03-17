@@ -39,7 +39,7 @@ app.controller("tenantsCtrl", function ($scope, $log, $http, tenantsService) {
 
     $scope.updateData = {};// אתחול משתנה חדש כי המשתנים שבתוך הפונקציה לא אותחלו
     $scope.updateTenantSave = function (tenant) {
-        debugger
+        
 
         if($scope.updateData === {}) {
             return
