@@ -16,7 +16,7 @@ app.controller("votingsCtrl", function ($scope, $log, $http) {
 
     //----------- adding .json file to the array-------------
     $scope.voteArray = [];
-
+    
     $http.get("app/votings/votingList.json").then(function (result) {
 
         for (var i = 0; i < result.data.length; i++) {
@@ -43,6 +43,7 @@ app.controller("votingsCtrl", function ($scope, $log, $http) {
                var voteIndex=element.votes[j].vote;
             $scope.data[voteIndex]++
            }
+           
         
         }
 
@@ -52,9 +53,12 @@ app.controller("votingsCtrl", function ($scope, $log, $http) {
 
 // Chart
         $scope.options = {
-            legend: {display: true},
+            legend: {
+                display: true,
+                position: 'right',
+            },
             // text: $scope.voteArray[0].title,
-            position: 'top'     
+            
         }
         
         // var testArr = [100, 40];
@@ -77,10 +81,21 @@ app.controller("votingsCtrl", function ($scope, $log, $http) {
 // -----------------------
 
     // creating new vote
-    $scope.addNewVote=function(element){
-        $scope.voteArray.push(new Vote(element)
-    );
-    }
+    // $scope.addNewVote=function(element){
+    //     $scope.voteArray.push(new Vote(element)
+    // );
+    // }
+
+//---------- vote input -----------
+$scope.voteInputArray=["",""];
+
+$scope.addNewInputVote=function(){
+    $scope.voteInputArray.push("");
+}
+$scope.deleteNewInputVote=function(index){
+   $scope.voteInputArray.splice(index,1);
+}
+
 
 
     }); //controller

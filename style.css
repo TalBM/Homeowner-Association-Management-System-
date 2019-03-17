@@ -126,7 +126,7 @@ h1, .h1{
 }
 
 .add-msg-bg, .votes{
-    background-color: #e7f3ff;
+    background-color: #f0f7ff;
     border: 1px solid #d2e8ff;
     padding: 20px;
     border-radius: 6px;
@@ -135,4 +135,9 @@ h1, .h1{
 .myflexbox{
     display: flex;
     flex-direction: row;
+}
+
+.add-new-iten{
+    float: right ;
+    margin-top: 7px;
 }
