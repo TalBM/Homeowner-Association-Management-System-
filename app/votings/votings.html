@@ -3,7 +3,8 @@
     <!-- <h1>this is voting {{test}}</h1> -->
     <div class="row relative">
         <p class="h1">נושאים להצבעה</p>
-        <a class="px-2 moove-left top-45" href="" ng-click="voteFormToggle()"><i class="fa fa-plus"></i><b> הוספת שאלון</b></a>
+        <a class="px-2 moove-left top-45 btn btn-primary" href="" ng-click="voteFormToggle()"><i class="fa fa-plus"></i><b>
+                הוספת שאלון</b></a>
     </div>
     <div ng-show="voteFormShow" class="votes row">
         <p class="h3">נושא חדש להצבעה</p>
@@ -11,32 +12,32 @@
             <div class="input-group-prepend">
                 <span class="input-group-text input-vote">כותרת</span>
             </div>
-            <input type="text" class="form-control" ng-model="voteTitle" placeholder="">
+            <input type="text" class="form-control" ng-model="voteTitle" placeholder="מי יזכה בבחירות">
         </div>
         <div class="input-group mb-1">
             <div class="input-group-prepend">
                 <span class="input-group-text input-vote">פרטים נוספים</span>
             </div>
-            <input type="text" class="form-control" ng-model="voteInfo">
+            <textarea rows="3" type="text-area" class="form-control" ng-model="voteDetails" placeholder="הצביעו והשפיעו"></textarea>
         </div>
         <div class="input-group mb-1">
             <div class="input-group-prepend">
                 <span class="input-group-text input-vote">תאריך סיום ההצבעה</span>
             </div>
-            <input type="date" class="form-control" ng-model="voteDuedate">
+            <input type="text" onfocus="(this.type='date')" class="form-control" ng-model="voteDuedate" placeholder="04-30-2018">
         </div>
 
         <div class="input-group mb-1">
             <div class="input-group-prepend">
                 <span class="input-group-text input-vote">אפשרות 1</span>
             </div>
-            <input type="text" ng-model="voteInput1" class="form-control">
+            <input type="text" ng-model="voteInput1" class="form-control" placeholder="ימין">
         </div>
         <div class="input-group mb-1">
             <div class="input-group-prepend">
                 <span class="input-group-text input-vote">אפשרות 2</span>
             </div>
-            <input type="text" ng-model="voteInput2" class="form-control">
+            <input type="text" ng-model="voteInput2" class="form-control" placeholder="שמאל">
         </div>
         <div class="input-group mb-1" ng-repeat="voteInput in voteInputArray track by $index">
             <div class="input-group-prepend">
@@ -47,7 +48,7 @@
         </div>
         <div class="raw container input-group mb-1">
             <a class="add-new-item px-2" href="" ng-click="addNewInputVote()"><i class="fa fa-plus"></i><b> הוסף שדה</b></a>
-            <a class="btn btn-primary px-2 mt-2 moove-left" href="">צור שאלון חדש</i>
+            <a class="btn btn-primary px-2 mt-2 moove-left" ng-click="addNewVote()" href="">צור שאלון חדש</i>
             </a>
         </div>
         <br>
@@ -64,6 +65,20 @@
     <!-- {{data}}
     {{labels}}
     {{options}} -->
+
+    <div class="row relative">
+        <h2>הצבעות רצות</h2>
+    </div>
+    <div class="row mt-5 mb-5">
+
+        <div class="col-md-6 col-sm-12 votes p-4 h-100" ng-repeat="runningVote in runningVoteArray">
+
+
+
+        </div>
+    </div>
+
+
 
     <div class="row relative">
         <h2>הצבעות שהסתיימו</h2>
