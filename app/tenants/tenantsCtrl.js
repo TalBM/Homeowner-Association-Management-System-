@@ -43,10 +43,10 @@ app.controller("tenantsCtrl", function ($scope, $log, $http, tenantsService) {
 
         if($scope.updateData === {}) {
             return
-        } else if (  ($scope.updateData.editedFamily.length ===0) || 
-            ($scope.updateData.editedHe.length ===0) || 
-            ($scope.updateData.editedShe.length ===0)) {
-            return
+        } else if (  (!$scope.updateData.editedFamily) || 
+            (!$scope.updateData.editedHe) || 
+            (!$scope.updateData.editedShe)) {
+            return;
         } else {
             tenant.familyName = $scope.updateData.editedFamily;
             tenant.heName = $scope.updateData.editedHe;
