@@ -1,6 +1,6 @@
 app.directive("msgCard", function() {
     return {
-      templateUrl: "app/messages/msgCard.html",
+      templateUrl: "app/messages/msgcard.html",
       restrict: "EA"
     }
   })
