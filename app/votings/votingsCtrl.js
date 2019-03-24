@@ -93,7 +93,6 @@ app.controller("votingsCtrl", function ($scope, $log, $http) {
     $scope.runningVoteArray = [];
 
     $scope.addNewVote = function () {
-        $scope.voteInputArray.push($scope.voteInput);
 
         var tempVote = new Vote(
             "משתמש אנונימי",
