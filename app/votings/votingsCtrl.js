@@ -3,11 +3,11 @@ app.controller("votingsCtrl", function ($scope, $log, $http) {
     // $scope.test = "---הצבעות OK---";
 
     // -----  constructor: vote
-    function Vote(createdBy, title, details, DueDate, voteOptions, votes) {
+    function Vote(createdBy, title, details, dueDate, voteOptions, votes) {
         this.createdBy = createdBy || "אדמיניסטרטור קונסטרקטור";
         this.title = title;
         this.details = details;
-        this.DueDate = DueDate;
+        this.dueDate = dueDate;
         this.voteOptions = voteOptions;
         this.votes = votes;
         this.data = [] ;
@@ -32,7 +32,7 @@ app.controller("votingsCtrl", function ($scope, $log, $http) {
                 element.createdBy,
                 element.title,
                 element.details,
-                element.DueDate,
+                element.dueDate,
                 element.voteOptions,
                 element.votes,
 
@@ -93,36 +93,30 @@ app.controller("votingsCtrl", function ($scope, $log, $http) {
     $scope.runningVoteArray = [];
 
     $scope.addNewVote = function () {
-        var tempVote=[
-            createdBy = "משתמש אנונימי",
-            title = $scope.voteTitle,
-            details = $scope.voteDetails,
-            DueDate = $scope.voteDuedate,
-            voteOptions = $scope.voteInputArray,
-            votes = []
-        ]
+        $scope.voteInputArray.push($scope.voteInput);
 
-        // $scope.runningVoteArray.push(new Vote(
-        //     // "משתמש אנונימי",
-        //     "",
-        //     $scope.voteTitle,
-        //     $scope.voteDetails,
-        //     $scope.voteDuedate,
-        //     $scope.voteInputArray,
-        //     []
-        // ));
-        $scope.runningVoteArray.push(new Vote(tempVote));
-        $scope.voteArray.push(new Vote(tempVote));
+        var tempVote = new Vote(
+            "משתמש אנונימי",
+            $scope.voteTitle,
+            $scope.voteDetails,
+            $scope.voteDuedate,
+            $scope.voteInputArray
+        )
+        
+        $scope.runningVoteArray.push(tempVote);
+        // $scope.voteArray.push(new Vote(tempVote));
 
-        console.log($scope.voteArray);
+        console.log($scope.runningVoteArray);
+        console.log($scope.voteInputArray);
+        debugger;
     }
 
 
 
 
     //---------- vote input -----------
-    $scope.voteInputArray = [];
-    $scope.voteInputArray.push($scope.voteInput1, $scope.voteInput2);
+    $scope.voteInputArray = ["", ""];
+    // $scope.voteInputArray.push("", "");
 
     $scope.addNewInputVote = function () {
         $scope.voteInputArray.push($scope.voteInput);

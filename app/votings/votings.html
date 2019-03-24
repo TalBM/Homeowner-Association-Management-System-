@@ -3,8 +3,11 @@
     <!-- <h1>this is voting {{test}}</h1> -->
     <div class="row relative">
         <p class="h1">נושאים להצבעה</p>
-        <a class="px-2 moove-left top-45 btn btn-primary" href="" ng-click="voteFormToggle()"><i class="fa fa-plus"></i><b>
-                הוספת שאלון</b></a>
+        <a class="px-2 moove-left top-45 btn btn-primary" href="" ng-click="voteFormToggle()">
+            <i class="fa fa-plus"></i>
+            <b>
+                הוספת שאלון</b>
+        </a>
     </div>
     <div ng-show="voteFormShow" class="votes row">
         <p class="h3">נושא חדש להצבעה</p>
@@ -12,44 +15,52 @@
             <div class="input-group-prepend">
                 <span class="input-group-text input-vote">כותרת</span>
             </div>
-            <input type="text" class="form-control" ng-model="voteTitle" placeholder="מי יזכה בבחירות">
+            <input type="text" class="form-control" ng-model="voteTitle" placeholder="מה נושא המשאל?">
         </div>
         <div class="input-group mb-1">
             <div class="input-group-prepend">
                 <span class="input-group-text input-vote">פרטים נוספים</span>
             </div>
-            <textarea rows="3" type="text-area" class="form-control" ng-model="voteDetails" placeholder="הצביעו והשפיעו"></textarea>
+            <textarea rows="3" type="text-area" class="form-control" ng-model="voteDetails" placeholder="כאן אפשר להרחיב"></textarea>
         </div>
         <div class="input-group mb-1">
             <div class="input-group-prepend">
                 <span class="input-group-text input-vote">תאריך סיום ההצבעה</span>
             </div>
-            <input type="text" onfocus="(this.type='date')" class="form-control" ng-model="voteDuedate" placeholder="04-30-2018">
+            <input type="text" onfocus="(this.type='date')" class="form-control" ng-model="voteDuedate" placeholder="">
         </div>
 
+<!--         
         <div class="input-group mb-1">
             <div class="input-group-prepend">
                 <span class="input-group-text input-vote">אפשרות 1</span>
             </div>
-            <input type="text" ng-model="voteInput1" class="form-control" placeholder="ימין">
+            <input type="text" ng-model="voteInput1" class="form-control" placeholder="שדה חובה">
         </div>
         <div class="input-group mb-1">
             <div class="input-group-prepend">
                 <span class="input-group-text input-vote">אפשרות 2</span>
             </div>
-            <input type="text" ng-model="voteInput2" class="form-control" placeholder="שמאל">
-        </div>
+            <input type="text" ng-model="voteInput2" class="form-control" placeholder="שדה חובה">
+        </div> -->
+
+
         <div class="input-group mb-1" ng-repeat="voteInput in voteInputArray track by $index">
             <div class="input-group-prepend">
-                <span class="input-group-text input-vote">אפשרות {{$index+3}}</span>
+                <span class="input-group-text input-vote">אפשרות {{$index+1}}</span>
             </div>
             <input type="text" ng-model="voteInput" class="form-control">
-            <a class="input-group-text" href="" ng-click="deleteNewInputVote($index)"><i class="fa fa-minus-circle"></i></a>
+            <a class="input-group-text" href="" ng-click="deleteNewInputVote($index)" ng-show="$index >= 2">
+                <i class="fa fa-minus-circle" ></i>
+            </a>
         </div>
         <div class="raw container input-group mb-1">
-            <a class="add-new-item px-2" href="" ng-click="addNewInputVote()"><i class="fa fa-plus"></i><b> הוסף שדה</b></a>
-            <a class="btn btn-primary px-2 mt-2 moove-left" ng-click="addNewVote()" href="">צור שאלון חדש</i>
+            <a class="add-new-item px-2" href="" ng-click="addNewInputVote()">
+                <i class="fa fa-plus"></i>
+                <b> הוסף שדה</b>
             </a>
+            <a class="btn btn-primary px-2 mt-2 moove-left" ng-click="addNewVote()" href="">צור שאלון חדש</a>
+
         </div>
         <br>
         <br>
@@ -72,8 +83,15 @@
     <div class="row mt-5 mb-5">
 
         <div class="col-md-6 col-sm-12 votes p-4 h-100" ng-repeat="runningVote in runningVoteArray">
-
-
+            <h3>{{runningVote.title}}</h3>
+            <p>{{runningVote.details}}</p>
+            <p>תאריך סיום ההצבעה: {{runningVote.dueDate}}</p>
+            <p>נא לבחור:</p>
+            <div class="form-check-inline"  ng-repeat="label in runningVote.labels track by $index">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="optradio">{{label}}
+                </label>
+              </div>
 
         </div>
     </div>
