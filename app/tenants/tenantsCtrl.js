@@ -59,5 +59,6 @@ app.controller("tenantsCtrl", function ($scope, $log, $http, tenantsService) {
 
     }
 
+    
 });
 
