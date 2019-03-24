@@ -108,7 +108,6 @@ app.controller("votingsCtrl", function ($scope, $log, $http) {
 
         console.log($scope.runningVoteArray);
         console.log($scope.voteInputArray);
-        debugger;
     }
 
 
